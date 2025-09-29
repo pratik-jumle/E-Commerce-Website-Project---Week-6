@@ -45,4 +45,13 @@ It mimics the core features of a real-world online store and provides a clean, A
 ---
 
 ## 📂 Project Structure  
+├── index.html # Home page with hero slider & product categories
+├── cart.html # Shopping cart page
+├── checkout.html # Front-end checkout simulation
+├── orders.html # Orders placeholder page
+├── css/
+│ └── style.css # Main stylesheet
+├── js/
+│ └── site.js # JS for cart, slider, product rendering
+└── images/ # Local demo images & hero banners
 
