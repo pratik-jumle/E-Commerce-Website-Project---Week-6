@@ -1,0 +1,36 @@
+
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Checkout - ShopSmart</title><link rel="stylesheet" href="css/style.css"></head><body>
+<header class="topnav"><div class="logo">ShopSmart</div><div class="nav-actions"><a href="index.html">Home</a> <a href="cart.html">Cart</a></div></header>
+<main class="container" style="margin-top:24px;"><section class="products-section"><h2>Checkout</h2>
+<div style="display:flex;gap:20px;flex-wrap:wrap;">
+  <div style="flex:1;min-width:280px;">
+    <h3>Delivery Address</h3>
+    <input placeholder="Full name"><br><br>
+    <input placeholder="Address line 1"><br><br>
+    <input placeholder="City, State, Pincode"><br><br>
+  </div>
+  <div style="flex:1;min-width:280px;">
+    <h3>Payment</h3>
+    <form id="payform">
+      <input placeholder="Name on card"><br><br>
+      <input placeholder="Card number"><br><br>
+      <input placeholder="MM/YY"> <input placeholder="CVV" style="width:100px; margin-left:8px;"><br><br>
+      <button class="btn" type="submit">Pay ₹<span id="pay-amount">0</span></button>
+    </form>
+  </div>
+</div>
+</section></main>
+<script>
+document.addEventListener('DOMContentLoaded', ()=>{
+  const cart = JSON.parse(localStorage.getItem('cart')||'[]');
+  const total = cart.reduce((s,p)=>s+p.price,0);
+  document.getElementById('pay-amount').textContent = total.toFixed(2);
+  document.getElementById('payform').addEventListener('submit', (e)=>{
+    e.preventDefault();
+    alert('Payment simulated. Thank you!');
+    localStorage.removeItem('cart');
+    window.location.href='orders.html';
+  });
+});
+</script>
+</body></html>

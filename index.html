@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ShopSmart - Mini Marketplace</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">ShopSmart</div>
+    <div class="searchbar">
+      <select id="cat-select"><option value="all">All</option><option value="electronics">Electronics</option><option value="fashion">Fashion</option><option value="home">Home & Kitchen</option><option value="services">Services</option></select>
+      <input id="search-input" placeholder="Search for products, brands and more">
+      <button id="search-btn">Search</button>
+    </div>
+    <div class="nav-actions">
+      <a href="#" id="signin">Hello, Sign in</a>
+      <a href="cart.html" class="cart-link">Cart (<span id="cart-count">0</span>)</a>
+    </div>
+  </header>
+
+  <nav class="category-row">
+    <a href="#" data-cat="electronics">Electronics</a>
+    <a href="#" data-cat="fashion">Fashion</a>
+    <a href="#" data-cat="home">Home & Kitchen</a>
+    <a href="#" data-cat="services">Services</a>
+    <a href="#" data-cat="all">See all</a>
+  </nav>
+
+  <section class="hero-slider">
+    <div class="slides">
+      <img src="images/hero/hero1.jpg" class="active">
+      <img src="images/hero/hero2.jpg">
+      <img src="images/hero/hero3.jpg">
+    </div>
+  </section>
+
+  <main class="container">
+    <section class="products-section" id="electronics-section">
+      <h2>Top Electronics</h2>
+      <div class="product-grid" id="electronics-grid"></div>
+    </section>
+
+    <section class="products-section" id="fashion-section">
+      <h2>Trending in Fashion</h2>
+      <div class="product-grid" id="fashion-grid"></div>
+    </section>
+
+    <section class="products-section" id="home-section">
+      <h2>Home & Kitchen Picks</h2>
+      <div class="product-grid" id="home-grid"></div>
+    </section>
+
+    <section class="products-section" id="services-section">
+      <h2>Local Services</h2>
+      <div class="product-grid" id="services-grid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-col">
+      <h4>Get to Know Us</h4>
+      <a>About</a><a>Careers</a><a>Press</a>
+    </div>
+    <div class="footer-col">
+      <h4>Customer Service</h4>
+      <a>Help</a><a>Returns</a><a>Track Order</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>pratikjumle04@gmail.com </p>
+    </div>
+    <p class="copyright">© 2025 ShopSmart</p>
+  </footer>
+
+<script src="js/site.js"></script>
+</body>
+</html>

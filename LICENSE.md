@@ -1,0 +1,1 @@
+This project is for educational/demo purposes. Replace demo images and data with your own content if deploying publicly.
